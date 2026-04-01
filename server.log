@@ -1,0 +1,86 @@
+{"timestamp": "2026-04-01 19:48:58,144", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:48:58,144", "level": "INFO", "logger": "__main__", "message": "FHE ML INFERENCE SERVER"}
+{"timestamp": "2026-04-01 19:48:58,144", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:48:58,146", "level": "INFO", "logger": "__main__", "message": "Loaded configuration from /Users/lokeshjoshi/Documents/Code Bases/phe-interface/fhe_config.yaml"}
+{"timestamp": "2026-04-01 19:48:58,146", "level": "INFO", "logger": "__main__", "message": "Initializing FHE Inference Server..."}
+{"timestamp": "2026-04-01 19:48:58,148", "level": "INFO", "logger": "src.server.inference", "message": "EncryptedInferenceServer initialized: 0.0.0.0:5001"}
+{"timestamp": "2026-04-01 19:48:58,148", "level": "INFO", "logger": "__main__", "message": "Setting up FHE context..."}
+{"timestamp": "2026-04-01 19:48:58,260", "level": "INFO", "logger": "src.fhe.context", "message": "FHE Context initialized: degree=8192, depth=3, scale_bits=40"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.server.inference", "message": "FHE context set on server"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "__main__", "message": "Loading ML model..."}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.models", "message": "SimpleNeuralNetwork initialized with input_dim=10"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 10 -> 16 (activation=relu)"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 16 -> 8 (activation=relu)"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.activations", "message": "Sigmoid approximation: degree=3, domain=(-4, 4)"}
+{"timestamp": "2026-04-01 19:48:58,261", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 8 -> 1 (activation=sigmoid)"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 10->16 weights loaded"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 16->8 weights loaded"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 8->1 weights loaded"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "__main__", "message": "Loaded neural network with 3 layers"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.server.inference", "message": "Registered model version v1: neural_network"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.server.inference", "message": "Set active model version to v1"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.server.inference", "message": "Model v1 registered: neural_network"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "__main__", "message": "Server initialization complete"}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "__main__", "message": "Starting server..."}
+{"timestamp": "2026-04-01 19:48:58,278", "level": "INFO", "logger": "src.server.inference", "message": "Starting FHE inference server on 0.0.0.0:5001"}
+{"timestamp": "2026-04-01 19:49:20,513", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:49:20,513", "level": "INFO", "logger": "__main__", "message": "FHE ML INFERENCE SERVER"}
+{"timestamp": "2026-04-01 19:49:20,513", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:49:20,515", "level": "INFO", "logger": "__main__", "message": "Loaded configuration from /Users/lokeshjoshi/Documents/Code Bases/phe-interface/fhe_config.yaml"}
+{"timestamp": "2026-04-01 19:49:20,515", "level": "INFO", "logger": "__main__", "message": "Initializing FHE Inference Server..."}
+{"timestamp": "2026-04-01 19:49:20,517", "level": "INFO", "logger": "src.server.inference", "message": "EncryptedInferenceServer initialized: 0.0.0.0:5001"}
+{"timestamp": "2026-04-01 19:49:20,517", "level": "INFO", "logger": "__main__", "message": "Setting up FHE context..."}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.fhe.context", "message": "FHE Context initialized: degree=8192, depth=3, scale_bits=40"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.server.inference", "message": "FHE context set on server"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "__main__", "message": "Loading ML model..."}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.models", "message": "SimpleNeuralNetwork initialized with input_dim=10"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 10 -> 16 (activation=relu)"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 16 -> 8 (activation=relu)"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.activations", "message": "Sigmoid approximation: degree=3, domain=(-4, 4)"}
+{"timestamp": "2026-04-01 19:49:20,624", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 8 -> 1 (activation=sigmoid)"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 10->16 weights loaded"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 16->8 weights loaded"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 8->1 weights loaded"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "__main__", "message": "Loaded neural network with 3 layers"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.server.inference", "message": "Registered model version v1: neural_network"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.server.inference", "message": "Set active model version to v1"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.server.inference", "message": "Model v1 registered: neural_network"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "__main__", "message": "Server initialization complete"}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "__main__", "message": "Starting server..."}
+{"timestamp": "2026-04-01 19:49:20,636", "level": "INFO", "logger": "src.server.inference", "message": "Starting FHE inference server on 0.0.0.0:5001"}
+{"timestamp": "2026-04-01 19:49:36,035", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:49:36,036", "level": "INFO", "logger": "__main__", "message": "FHE ML INFERENCE SERVER"}
+{"timestamp": "2026-04-01 19:49:36,036", "level": "INFO", "logger": "__main__", "message": "======================================================================"}
+{"timestamp": "2026-04-01 19:49:36,037", "level": "INFO", "logger": "__main__", "message": "Loaded configuration from /Users/lokeshjoshi/Documents/Code Bases/phe-interface/fhe_config.yaml"}
+{"timestamp": "2026-04-01 19:49:36,037", "level": "INFO", "logger": "__main__", "message": "Initializing FHE Inference Server..."}
+{"timestamp": "2026-04-01 19:49:36,039", "level": "INFO", "logger": "src.server.inference", "message": "EncryptedInferenceServer initialized: 0.0.0.0:5002"}
+{"timestamp": "2026-04-01 19:49:36,039", "level": "INFO", "logger": "__main__", "message": "Setting up FHE context..."}
+{"timestamp": "2026-04-01 19:49:36,146", "level": "INFO", "logger": "src.fhe.context", "message": "FHE Context initialized: degree=8192, depth=3, scale_bits=40"}
+{"timestamp": "2026-04-01 19:49:36,146", "level": "INFO", "logger": "src.server.inference", "message": "FHE context set on server"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "__main__", "message": "Loading ML model..."}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.models", "message": "SimpleNeuralNetwork initialized with input_dim=10"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 10 -> 16 (activation=relu)"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.activations", "message": "ReLU approximation: degree=3, domain=(-1, 2)"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 16 -> 8 (activation=relu)"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.activations", "message": "Sigmoid approximation: degree=3, domain=(-4, 4)"}
+{"timestamp": "2026-04-01 19:49:36,147", "level": "INFO", "logger": "src.ml.models", "message": "Added layer: 8 -> 1 (activation=sigmoid)"}
+{"timestamp": "2026-04-01 19:49:36,157", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 10->16 weights loaded"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 16->8 weights loaded"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.ml.models", "message": "DenseLayer 8->1 weights loaded"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "__main__", "message": "Loaded neural network with 3 layers"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.server.inference", "message": "Registered model version v1: neural_network"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.server.inference", "message": "Set active model version to v1"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.server.inference", "message": "Model v1 registered: neural_network"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "__main__", "message": "Server initialization complete"}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "__main__", "message": "Starting server..."}
+{"timestamp": "2026-04-01 19:49:36,158", "level": "INFO", "logger": "src.server.inference", "message": "Starting FHE inference server on 0.0.0.0:5002"}
+{"timestamp": "2026-04-01 19:49:36,168", "level": "INFO", "logger": "werkzeug", "message": "[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.1.8:5002"}
+{"timestamp": "2026-04-01 19:49:36,168", "level": "INFO", "logger": "werkzeug", "message": "[33mPress CTRL+C to quit[0m"}

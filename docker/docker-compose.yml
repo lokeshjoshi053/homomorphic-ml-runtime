@@ -1,0 +1,64 @@
+# Docker Compose for FHE ML Inference System
+# Includes: FHE inference server, monitoring (optional)
+
+version: '3.8'
+
+services:
+  fhe-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+      LOG_LEVEL: INFO
+      # FHE Configuration
+      FHE_POLY_MODULUS: "8192"
+      FHE_SCALE_BITS: "40"
+    volumes:
+      # Mount model weights (if loading from file)
+      - ./models:/app/models:ro
+      # Mount logs
+      - ./logs:/app/logs
+    restart: unless-stopped
+    
+    # Resource limits for security
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    read_only_root_filesystem: false
+    # capabilities:
+    #   drop:
+    #     - ALL
+
+# Optional: Monitoring with Prometheus
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  #   command:
+  #     - '--config.file=/etc/prometheus/prometheus.yml'
+
+volumes:
+  models:
+  logs:

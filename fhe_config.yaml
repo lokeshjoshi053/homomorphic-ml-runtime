@@ -1,0 +1,68 @@
+# FHE System Configuration
+# This configuration defines CKKS scheme parameters and system settings
+
+fhe:
+  scheme: "CKKS"
+  
+  # CKKS Parameters
+  poly_modulus_degree: 8192        # Powers of 2: 2048, 4096, 8192, 16384, 32768
+  coeff_modulus_bits: [60, 40, 40, 60]  # Bit sizes for coefficient moduli
+  scale: 40                                # Bit size for scale
+  
+  # Security
+  security_level: 128              # 128-bit security (sufficient for most applications)
+  
+  # Noise Management
+  rescale_enabled: true            # Enable automatic rescaling after multiplication
+  bootstrap_enabled: false         # Enable bootstrapping for deeper circuits (computationally expensive)
+  
+ml:
+  # Model Configuration
+  model_type: "neural_network"  # Options: logistic_regression, neural_network
+  
+  # Input dimensionality
+  input_dim: 10
+  
+  # Activation approximations
+  activation:
+    type: "polynomial"  # Options: polynomial, chebyshev, rational
+    degree: 3           # Polynomial degree for approximation
+    
+  # Optimization
+  batch_size: 1
+  vectorization_enabled: true
+
+performance:
+  # Feature optimization flags
+  simd_packing: true
+  ciphertext_compression: true
+  
+  # Timeout settings (seconds)
+  inference_timeout: 30
+  key_generation_timeout: 60
+
+security:
+  # Key management
+  key_storage: "client_side_only"
+  enable_key_rotation: false
+  
+  # Serialization
+  enable_ciphertext_validation: true
+  serialize_public_key: true
+  serialize_secret_key: false  # NEVER send secret keys
+
+server:
+  host: "0.0.0.0"
+  port: 5002
+  debug: false
+  enable_cors: true
+  
+client:
+  server_url: "http://localhost:5000"
+  timeout: 30
+  verify_ssl: false  # Set to true in production
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "system.log"
